@@ -1,48 +1,34 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+
 using Corel.Interop.VGCore;
 
 namespace CBox
 {
-	[System.AttributeUsage(System.AttributeTargets.Class)]
-	public class CgsAddInModule : System.Attribute { };
+	[AttributeUsage(AttributeTargets.Class)]
+	public class CgsAddInModule : Attribute { };
 
-	[System.AttributeUsage(System.AttributeTargets.Constructor)]
-	public class CgsAddInConstructor : System.Attribute { };
+	[AttributeUsage(AttributeTargets.Constructor)]
+	public class CgsAddInConstructor : Attribute { };
 
-	[System.AttributeUsage(System.AttributeTargets.Method)]
-	public class CgsAddInMacro : System.Attribute { };
+	[AttributeUsage(AttributeTargets.Method)]
+	public class CgsAddInMacro : Attribute { };
 
-	[System.AttributeUsage(System.AttributeTargets.Class)]
-	public class CgsAddInTool : System.Attribute
+	[AttributeUsage(AttributeTargets.Class)]
+	public class CgsAddInTool : Attribute
 	{
-		public string Guid
-		{
-			get { return guid; }
-			set { guid = value; }
-		}
-		public string Name
-		{
-			get { return name; }
-			set { name = value; }
-		}
-		private string guid;
-		private string name;
-	};
+        public string Guid { get; set; }
+        public string Name { get; set; }
+    };
 
 	[CgsAddInModule]
 	public partial class Main
 	{
-		private Corel.Interop.VGCore.Application app;
+		private readonly Application _app;
 
 		[CgsAddInConstructor]
-		public Main(object _app)
+		public Main(object app)
 		{
-			app = _app as Corel.Interop.VGCore.Application;
+			_app = app as Application;
 			Startup();
 		}
 	}
