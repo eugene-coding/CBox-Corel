@@ -11,7 +11,7 @@ namespace CBox
 		[CgsAddInMacro]
 		public void Macro1()
 		{
-			MessageBox.Show("Macro1 - " + _app.Name);
+			MessageBox.Show("Macro1 - " + App.Name);
 		}
 	}
 }

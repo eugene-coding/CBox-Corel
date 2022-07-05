@@ -23,13 +23,13 @@ namespace CBox
 	[CgsAddInModule]
 	public partial class Main
 	{
-		private readonly Application _app;
-
-		[CgsAddInConstructor]
+        [CgsAddInConstructor]
 		public Main(object app)
 		{
-			_app = app as Application;
+			App = app as Application;
 			Startup();
 		}
-	}
+
+        public static Application App { get; private set; }
+    }
 }
