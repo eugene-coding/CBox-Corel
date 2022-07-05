@@ -41,6 +41,7 @@
     <Reference Include="Corel.Interop.VGCore.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CenterDistance.cs" />
     <Compile Include="Macro.cs" />
     <Compile Include="Macro.Internal.cs">
       <DependentUpon>Macro.cs</DependentUpon>
