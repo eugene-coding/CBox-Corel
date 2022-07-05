@@ -2,7 +2,7 @@
 {
     public struct CenterDistance
     {
-        public CenterDistance(double horizontal, double vertical)
+        public CenterDistance(double horizontal, double vertical) : this()
         {
             Horizontal = horizontal;
             Vertical = vertical;
