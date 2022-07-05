@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CenterDistance.cs" />
+    <Compile Include="Commands\DeleteCenterDistance.cs" />
     <Compile Include="Commands\ICommand.cs" />
     <Compile Include="Commands\VisualizedCenterDistance.cs" />
     <Compile Include="Macro.cs" />
