@@ -42,11 +42,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CenterDistance.cs" />
+    <Compile Include="Commands\ICommand.cs" />
+    <Compile Include="Commands\VisualizedCenterDistance.cs" />
     <Compile Include="Macro.cs" />
     <Compile Include="Macro.Internal.cs">
       <DependentUpon>Macro.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\Resource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Resource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
